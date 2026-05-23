@@ -15,10 +15,10 @@ app.use((req, res, next) => {
 });
 
 // 2. Serve a static HTML page at /
-// Note: Create a 'public' folder and put an 'index.html' file inside it.
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 3. GET / -> Returns text (If index.html exists, it may override this root route depending on configuration)
+// 3. GET / -> Returns text 
 app.get('/text-api', (req, res) => {
     res.send("My Week 2 API!");
 });
@@ -35,7 +35,7 @@ app.post('/user', (req, res) => {
     res.send(`Hello, ${name}!`);
 });
 
-// 5. GET /user/:id -> "User [id] profile"
+// 5. GET /user/:id 
 app.get('/user/:id', (req, res) => {
     const userId = req.params.id;
     res.send(`User ${userId} profile`);
