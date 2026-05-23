@@ -14,7 +14,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// 2. Serve a static HTML page at /
+// 2. Serve a static HTML page at 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
